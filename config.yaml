@@ -1,0 +1,22 @@
+base_url: 'https://itviec.com'
+user_agent: 'uni-jobchatbot/0.1 (academic project)'
+
+paths:
+  raw_listings_dir: 'data/raw/listings'
+  raw_jobs_dir: 'data/raw/jobs'
+  seeds_job_urls: 'data/seeds/job_urls.txt'
+  out_job_details: 'data/out/job_details.json'
+
+extract:
+  min_job_id_digits: 4
+
+crawl:
+  limit: 20 
+  save_raw_job_html: false
+  drop_listing_like_titles: true
+
+rate_limit:
+  min_delay_s: 1.0  
+  max_delay_s: 2.0  
+  timeout_s: 25
+  max_retries: 6
